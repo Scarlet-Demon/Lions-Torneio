@@ -1,21 +1,11 @@
-const prompt = require('prompt-sync') ()
 const {adicionarConsulta} = require('./adicionar')
 const {listarConsultas} = require('./listar')
 const {atualizarConsultas} = require('./atualizar')
 const {cancelarConsultas} = require('./cancelar')
 
-exibirMenu()
-
 function exibirMenu() {
-    console.log(`
-    Bem-Vindo, selecione a opção desejada:
-    1. Adicionar nova seção;
-    2. Listar todas as seções;
-    3. Atualizar uma seção existente;
-    4. Cancelar uma seção;
-    5. Sair.`)
-
-    rl.questions('Escolha uma Opção:  ', (opcao) => {
+    console.log('Bem-Vindo;\n 1. Adicionar nova seção;\n 2. Listar todas as seções;\n 3. Atualizar uma seção existente;\n 4. Cancelar uma seção;\n 5. Sair.')
+    let opcao = prompt('Qual a a opção desejada?')
         switch (opcao) {
             case '1':
                 adicionarConsulta(exibirMenu)
@@ -30,14 +20,13 @@ function exibirMenu() {
                 cancelarConsultas(exibirMenu)
                 break;
             case '5':
-                rl.close()
+                return
                 break;
             default:
                 console.log('Opção inválida, tente novamente.')
 				exibirMenu()
                 break;
         }
-    })
 };
 
 module.exports = {exibirMenu}
