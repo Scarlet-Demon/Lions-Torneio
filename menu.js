@@ -1,23 +1,23 @@
-const {adicionarConsulta} = require('./adicionar')
-const {listarConsultas} = require('./listar')
-const {atualizarConsultas} = require('./atualizar')
-const {cancelarConsultas} = require('./cancelar')
+const {adicionarFilmes} = require('./adicionar')
+const {listarFilmes} = require('./listar')
+const {atualizarFilmes} = require('./atualizar')
+const {cancelarIngressos} = require('./cancelar')
 
 function exibirMenu() {
-    console.log('Bem-Vindo;\n 1. Adicionar nova seção;\n 2. Listar todas as seções;\n 3. Atualizar uma seção existente;\n 4. Cancelar uma seção;\n 5. Sair.')
+    console.log('Bem-Vindo ao Cinema Iluminations; Qual a sua Escolha: ;\n 1. Adicionar nova Sessão;\n 2. Listar todas as Sessões;\n 3. Atualizar uma Sessão Existente;\n 4. Cancelar uma Sessão;\n 5. Sair.')
     let opcao = prompt('Qual a a opção desejada?')
         switch (opcao) {
             case '1':
-                adicionarConsulta(exibirMenu)
+		listarFilmes(exibirMenu)
                 break;
             case '2':
-                listarConsultas(exibirMenu)
+                adicionarFilmes(exibirMenu)
                 break;
             case '3':
-                atualizarConsultas(exibirMenu)
+                atualizarFilmes(exibirMenu)
                 break;
             case '4':
-                cancelarConsultas(exibirMenu)
+                cancelarFilmes(exibirMenu)
                 break;
             case '5':
                 return
