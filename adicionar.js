@@ -1,17 +1,17 @@
-const { listarConsultas } = require("./listar")
+const { listarFilmes } = require("./listar")
 
-function adicionarConsulta(callback){
-    /*listarConsultas()*/
-    if(consultas==0){
-        console.log('Não ha seções disponiveis!')
+function adicionarFilmes(callback){
+    /*listarFilmes()*/
+    if(sessoes == 0){
+        console.log('Não ha Sessões Disponiveis!')
         callback()
     }else{
-        let nome = prompt('Qual o nome da seção?')
-        let data = prompt('Qual a data da seção?')
-        let horario = prompt('Qual o horário da seção?')
-        let sala = prompt('Qual a sala da seção?')
-        consultas.push({nome,data,horario,sala})
+        let nome = prompt('Qual o Nome da Sessão?')
+        let data = prompt('Qual a Data da Sessão?')
+        let horario = prompt('Qual o Horário da Sessão?')
+        let sala = prompt('Qual a Sala da Sessão?')
+        sessoes.push({nome,data,horario,sala})
         callback()
     }
 }
-module.exports = {adicionarConsulta}
+module.exports = {adicionarFilmes}
