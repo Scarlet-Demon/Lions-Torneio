@@ -5,13 +5,13 @@ function atualizarFilmes(callback){
         console.log('Sessão Não Encontarda, Tente Novamente')
         atualizarFilmes(callback)
     } else {
-        let nome = prompt('Digite o Novo Nome do Filme: ');
-        let data = prompt('Digite o Nova Data: ');
-        let hora = prompt('Digite o Nova Hora: ');
-        let sala = prompt('Digite o Nova Sala: ');
+        let nome = prompt('Digite o Novo Nome da Sessão: ');
+        let data = prompt('Digite o Nova Data da Sessão: ');
+        let hora = prompt('Digite o Novo Horario da Sessão: ');
+        let sala = prompt('Digite o Nova Sala da Sessão: ');
         sessoes[index] = {nome, data, hora, sala}
         console.log('Sessão Atualizada com Sucesso!')
     }
     callback()
 }
-module.exports = {atualizarConsultas}
+module.exports = {atualizarFilmes}
