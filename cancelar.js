@@ -1,5 +1,5 @@
-function cancelarConsultas(callback){
-    if (jogador.length == 0) {
+function cancelarIngressos(callback){
+    if (sessoe.length == 0) {
         console.log('Não há seções a remover.')
         callback()
     } else {
