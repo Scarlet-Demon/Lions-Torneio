@@ -1,7 +1,7 @@
-function cancelarConsultas(){
+function cancelarConsultas(callback){
     if (jogador.length == 0) {
         console.log('Não há seções a remover.')
-        exibirMenu()
+        callback()
     } else {
             console.log('Lista de seções:')
             consultas.forEach((consulta, index) => {
@@ -11,10 +11,10 @@ function cancelarConsultas(){
                 if(remover > 0 && remover<= consultas.length) {
                     consultas.splice (remover -1, 1)
                     console.log('Jogador removido com sucesso!')
-                    exibirMenu()
+                    callback()
                 }else {
                     console.log('Opção Inválida, digite novamente.')
-                    exibirMenu()
+                    callback()
                 }
     }
 }
