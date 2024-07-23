@@ -1,7 +1,7 @@
 function atualizarFilmes(callback){
     let num = prompt('Digite o Número da Sessão que deseja Atualizar: ')
     const index = parseInt(num) - 1
-    if (index < 0 || index >= consultas.length) {
+    if (index < 0 || index >= sessoes.length) {
         console.log('Sessão Não Encontarda, Tente Novamente')
         atualizarFilmes(callback)
     } else {
@@ -9,7 +9,7 @@ function atualizarFilmes(callback){
         let data = prompt('Digite o Nova Data: ');
         let hora = prompt('Digite o Nova Hora: ');
         let sala = prompt('Digite o Nova Sala: ');
-        sessoe[index] = {nome, data, hora, sala}
+        sessoes[index] = {nome, data, hora, sala}
         console.log('Sessão Atualizada com Sucesso!')
     }
     callback()
