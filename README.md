@@ -11,16 +11,16 @@ global.prompt = prompt
 global.prompt = sessoes
 ```
 Como sempre nas outras linhas de códigos criamos um `Menu` para fácil compreenção do usuário em relação ao código, criamos um `Switch` para a navegação das funções criadas para cada um das opções do Menu sendo elas: 
-`### adicionarSessao`
-`### listarSessoes`
-`### atualizarSessão`
-`### cancelarIngresso`
+`adicionarSessao`
+`listarSessoes`
+`atualizarSessão`
+`cancelarIngresso`
 As opções do Menu era essas: 
-`### Adicionar nova Sessão`
-`### Listar Todas as Sessões`
-`### Atualizar uma Sessão`
-`### Cancelar uma Sessão`
-`### Sair`
+`Adicionar nova Sessão`
+`Listar Todas as Sessões`
+`Atualizar uma Sessão`
+`Cancelar uma Sessão`
+`Sair`
 
 ## Desenvolvimento
 Como dito anteiormente, Criemos `Funções`, para o compreendimento do código que ao escolher uma opção do Menu ele deverá executar ela de acordo com essa escolha (é nesse caso que entra o `Switch`).
