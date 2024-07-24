@@ -32,23 +32,22 @@ Como diz o nome da função, ela `adicionar` uma Sessão no `Banco de Dados` do 
 `O horário da Sessão`
 `A sala da Sessão`
 ```javascript
-function adicionarSessao(callback){
-    if(sessoes == 0){
-        console.log('Não ha Sessões Disponiveis!')
-        callback()
-    }else{
-        let nome = prompt('Qual o Nome da Sessão? ')
-        let data = prompt('Qual a Data da Sessão? ')
-        let horario = prompt('Qual o Horário da Sessão? ')
-        let sala = prompt('Qual a Sala da Sessão? ')
-        global.sessoes.push({ nome, data, horario, sala })
-        callback()
-    }
+const { listarFilmes } = require("./listar")
+
+function adicionarSessao(exibirMenu){
+    let nome = prompt('Qual o Nome da Sessão? ')
+    let data = prompt('Qual a Data da Sessão? ')
+    let horario = prompt('Qual o Horário da Sessão? ')
+    let sala = prompt('Qual a Sala da Sessão? ')
+    global.sessoes.push({ nome, data, horario, sala })
+    exibirMenu()
+}
+module.exports = { adicionarSessao }
 ```
 ## Função Listar
 Como o próprio nome diz, está função `Lista` ás Sessões que já foram salvas no Bando de Dados do código(prompt)
 ```javascript
-function listarSessoes(callback) {
+function listarSessoes() {
     console.log("=======================================================")
     global.sessoes.forEach((sessao, index) => {
         console.log(`
@@ -59,17 +58,21 @@ function listarSessoes(callback) {
             |sala: ${sessao.sala}|`)
         console.log("=======================================================")
     });
-    callback()
+}
+module.exports = { listarSessoes }
 ```
 ## Função Atualizar
 Como o próprio nome diz, está função `Atualiza` ás Sessões que já foram criadas pela `Função Adicionar` e refaz novas perguntas para o usuário, adicionando novas informações no código e depois fazendo as alterações no Banco de Dados (prompt), no qual o usuário pode escolher qual Sessão ele deseja atualizar.
 ```javascript
-function atualizarSessao(callback) {
+const { listarSessoes } = require("./listar")
+
+function atualizarSessao(exibirMenu) {
+    listarSessoes()
     let num = prompt('Digite o Número da Sessão que deseja Atualizar: ')
     const index = parseInt(num) - 1
     if (index < 0 || index >= global.sessoes.length) {
         console.log('Sessão Não Encontrada, Tente Novamente')
-        atualizarSessao(callback)
+        atualizarSessao()
     } else {
         let nome = prompt('Digite o Novo Nome da Sessão: ');
         let data = prompt('Digite a Nova Data da Sessão: ');
@@ -78,8 +81,9 @@ function atualizarSessao(callback) {
         global.sessoes[index] = { nome, data, hora, sala }
         console.log('Sessão Atualizada com Sucesso!')
     }
-    callback()
+    exibirMenu()
 }
+module.exports = { atualizarSessao }
 ```
 ## Função Cancelar
 Como o diz o nome, está função `Cancela` ou `Remove` ás Sessões que foram criadas pela `Função Adicionar` do Banco de Dados (prompt), no qual o usuário pode escolher qual Sessão ele deseja cancelar ou remover.
