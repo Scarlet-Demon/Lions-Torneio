@@ -1,21 +1,23 @@
-function cancelarIngressos(callback){
-    if (sessoe.length == 0) {
-        console.log('Não há Ingressos a Serem Cancelados.')
+function cancelarIngressos(callback) {
+    if (global.sessoes.length == 0) {
+        console.log('Não há Sessões a Serem Canceladas.')
         callback()
     } else {
-            console.log('Lista de sessões: ')
-            consultas.forEach((sessoes, index) => {
-                console.log(`${index + 1}. ${sessoes.nome}`)
-            })
-            let cancelar = prompt('Digite o Ingresso que Deseja Cancelar: ')
-                if(cancelar > 0 && cancelar <= sessoes.length) {
-                    sessoes.splice (cancelar -1, 1)
-                    console.log('Ingresso Cancelado. Te Vejo na Proxima Vez :)')
-                    callback()
-                }else {
-                    console.log('Opção Inválida, digite novamente.')
-                    cancelarIngressos(Callback)
-                }
+        console.log('Lista de sessões: ')
+        global.sessoes.forEach((sessao, index) => {
+            console.log(`${index + 1}. ${sessao.nome}`)
+        })
+        let cancelar = prompt('Digite o Número da Sessão que Deseja Cancelar: ')
+        const index = parseInt(cancelar) - 1
+        if (index >= 0 && index < global.sessoes.length) {
+            global.sessoes.splice(index, 1)
+            console.log('Sessão Cancelada com Sucesso. Te Vejo na Próxima Vez :)')
+        } else {
+            console.log('Opção Inválida, digite novamente.')
+            cancelarIngressos(callback)
+        }
+        callback()
     }
 }
-module.exports = {cancelarIngressos}
+
+module.exports = { cancelarIngressos }
