@@ -1,9 +1,9 @@
 const prompt = require('prompt-sync')()
 const {exibirMenu} = require('./menu')
 
-let consultas = []
+let sessoes = []
 
 global.prompt = prompt
-global.consultas = consultas
+global.sessoes = sessoes
 
 exibirMenu()
