@@ -11,7 +11,8 @@ function exibirMenu() {
             adicionarSessao(exibirMenu)
             break;
         case '2':
-            listarSessoes(exibirMenu)
+            listarSessoes()
+            exibirMenu()
             break;
         case '3':
             atualizarSessao(exibirMenu)
