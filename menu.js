@@ -20,6 +20,7 @@ function exibirMenu() {
             cancelarIngressos(exibirMenu)
             break;
         case '5':
+            console.log(`Eaí se divertiu Amiguinho(a)?, É uma pena que você está indo embora, mais isso não é um Adeus, e sim um Até Logo, pois o Mundo é Cheio de Aventuras, que está sempre buscando um novo Protagonista. Espero que um dia ele seja Você e que eu possa contar á sua História. Até logo Amiguinho(a), te vejo por ai em meio às Histórias do Mundo.`)
             return
             break;
         default:
