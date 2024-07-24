@@ -1,4 +1,4 @@
-function listarFilmes(callback) {
+function listarSessoes(callback) {
     console.log("=======================================================")
     global.sessoes.forEach((sessao, index) => {
         console.log(`
@@ -11,4 +11,4 @@ function listarFilmes(callback) {
     });
     callback()
 }
-module.exports = { listarFilmes }
+module.exports = { listarSessoes }
