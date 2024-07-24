@@ -19,5 +19,4 @@ function cancelarIngressos(callback) {
         callback()
     }
 }
-
 module.exports = { cancelarIngressos }
