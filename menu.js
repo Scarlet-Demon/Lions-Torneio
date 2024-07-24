@@ -13,7 +13,7 @@ function exibirMenu() {
     |       4. Cancelar uma Sessão;                                                                                                |
     |       5. Sair.                                                                                                               |
     +==============================================================================================================================+
-    `)                                                                                                             |
+    `)                                                                                                             
     let opcao = prompt('Qual á sua Escolha de Hoje: ')
     switch (opcao) {
         case '1':
