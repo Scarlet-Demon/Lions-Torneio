@@ -12,4 +12,5 @@ function adicionarSessao(callback){
         global.sessoes.push({ nome, data, horario, sala })
         callback()
     }
+}
 module.exports = { adicionarSessao }
