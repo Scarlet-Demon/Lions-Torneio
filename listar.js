@@ -1,4 +1,4 @@
-function listarFilmess(callback){
+function listarFilmes(callback){
 
         console.log("=======================================================")
        
@@ -14,4 +14,4 @@ function listarFilmess(callback){
     });
    
 }
-module.exports = {listarConsultas}
+module.exports = {listarFilmes}
