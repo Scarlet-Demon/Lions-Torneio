@@ -1,9 +1,9 @@
-function atualizarFilmes(callback) {
+function atualizarSessao(callback) {
     let num = prompt('Digite o Número da Sessão que deseja Atualizar: ')
     const index = parseInt(num) - 1
     if (index < 0 || index >= global.sessoes.length) {
         console.log('Sessão Não Encontrada, Tente Novamente')
-        atualizarFilmes(callback)
+        atualizarSessao(callback)
     } else {
         let nome = prompt('Digite o Novo Nome da Sessão: ');
         let data = prompt('Digite a Nova Data da Sessão: ');
@@ -14,4 +14,4 @@ function atualizarFilmes(callback) {
     }
     callback()
 }
-module.exports = { atualizarFilmes }
+module.exports = { atualizarSessao }
