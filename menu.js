@@ -1,6 +1,6 @@
-const { listarFilmes } = require('./listar')
-const { adicionarFilmes } = require('./adicionar')
-const { atualizarFilmes } = require('./atualizar')
+const { listarSessoes } = require('./listar')
+const { adicionarSessao } = require('./adicionar')
+const { atualizarSessao } = require('./atualizar')
 const { cancelarIngressos } = require('./cancelar')
 
 function exibirMenu() {
@@ -8,13 +8,13 @@ function exibirMenu() {
     let opcao = prompt('Qual á sua Escolha de Hoje: ')
     switch (opcao) {
         case '1':
-            adicionarFilmes(exibirMenu)
+            adicionarSessao(exibirMenu)
             break;
         case '2':
-            listarFilmes(exibirMenu)
+            listarSessoes(exibirMenu)
             break;
         case '3':
-            atualizarFilmes(exibirMenu)
+            atualizarSessao(exibirMenu)
             break;
         case '4':
             cancelarIngressos(exibirMenu)
