@@ -1,17 +1,14 @@
-function listarFilmes(callback){
-
-        console.log("=======================================================")
-       
-    consultas.forEach((consultas,index)=> {
+function listarFilmes(callback) {
+    console.log("=======================================================")
+    global.sessoes.forEach((sessao, index) => {
         console.log(`
             ${index + 1}.
-         |nome: ${consultas.nome[i]}| \n
-         |data: ${consultas.data[i]}| \n
-         |hora: ${consultas.hora[i]}| \n
-         |sala: ${consultas.sala[i]}|`)  
-       
-         console.log("=======================================================")
+            |nome: ${sessao.nome}| \n
+            |data: ${sessao.data}| \n
+            |hora: ${sessao.hora}| \n
+            |sala: ${sessao.sala}|`)
+        console.log("=======================================================")
     });
-   
+    callback()
 }
-module.exports = {listarFilmes}
+module.exports = { listarFilmes }
