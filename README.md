@@ -1,4 +1,4 @@
-# É os Guri da Computação
+# Cine Ilumination
 ## Introdução 
 Criamos o nosso código no processo `prompt` como solicitado pelo nosso Professor, como o processo `prompt` é parecido com o processo `readline`, como sempre declarmos a função criando primeiro a Bibliopteca do nossa Código sobre `Sessão de Filme`. Em seguida criamos uma variavel com o nome de `Sessões` para armazenar as informações que seram adicionadas no terminal conforme o pedido do Usuário, depois disso tranformamos o espaço dessa variavel e o comando prompt em espaços globais para facilitar os envios de informações. 
 ```Javascript
