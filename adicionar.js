@@ -1,6 +1,6 @@
 const { listarFilmes } = require("./listar")
 
-function adicionarFilmes(callback){
+function adicionarSessao(callback){
     if(sessoes == 0){
         console.log('Não ha Sessões Disponiveis!')
         callback()
@@ -12,4 +12,4 @@ function adicionarFilmes(callback){
         global.sessoes.push({ nome, data, horario, sala })
         callback()
     }
-module.exports = { adicionarFilmes }
+module.exports = { adicionarSessao }
