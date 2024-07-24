@@ -4,7 +4,7 @@ const {atualizarFilmes} = require('./atualizar')
 const {cancelarIngressos} = require('./cancelar')
 
 function exibirMenu() {
-    console.log('Bem-Vindo ao Cinema Iluminations; Qual a sua Escolha: ;\n 1. Adicionar nova Sessão;\n 2. Listar todas as Sessões;\n 3. Atualizar uma Sessão Existente;\n 4. Cancelar uma Sessão;\n 5. Sair.')
+    console.log('Bem-Vindo ao Cine Ilumination; Qual a sua Escolha: ;\n 1. Adicionar nova Sessão;\n 2. Listar todas as Sessões;\n 3. Atualizar uma Sessão Existente;\n 4. Cancelar uma Sessão;\n 5. Sair.')
     let opcao = prompt('Qual a a opção desejada?')
         switch (opcao) {
             case '1':
