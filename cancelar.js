@@ -1,21 +1,21 @@
 function cancelarIngressos(callback){
     if (sessoe.length == 0) {
-        console.log('Não há seções a remover.')
+        console.log('Não há Ingressos a Serem Cancelados.')
         callback()
     } else {
-            console.log('Lista de seções:')
-            consultas.forEach((consulta, index) => {
-                console.log(`${index + 1}. ${consulta.nome}`)
+            console.log('Lista de sessões: ')
+            consultas.forEach((sessoes, index) => {
+                console.log(`${index + 1}. ${sessoes.nome}`)
             })
-            let remover = prompt('Digite o jogador que deseja remover: ')
-                if(remover > 0 && remover<= consultas.length) {
-                    consultas.splice (remover -1, 1)
-                    console.log('Jogador removido com sucesso!')
+            let cancelar = prompt('Digite o Ingresso que Deseja Cancelar: ')
+                if(cancelar > 0 && cancelar <= sessoes.length) {
+                    sessoes.splice (cancelar -1, 1)
+                    console.log('Ingresso Cancelado. Te Vejo na Proxima Vez :)')
                     callback()
                 }else {
                     console.log('Opção Inválida, digite novamente.')
-                    callback()
+                    cancelarIngressos(Callback)
                 }
     }
 }
-module.exports = {cancelarConsultas}
+module.exports = {cancelarIngressos}
