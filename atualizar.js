@@ -1,9 +1,12 @@
-function atualizarSessao(callback) {
+const { listarSessoes } = require("./listar")
+
+function atualizarSessao(exibirMenu) {
+    listarSessoes()
     let num = prompt('Digite o Número da Sessão que deseja Atualizar: ')
     const index = parseInt(num) - 1
     if (index < 0 || index >= global.sessoes.length) {
         console.log('Sessão Não Encontrada, Tente Novamente')
-        atualizarSessao(callback)
+        atualizarSessao()
     } else {
         let nome = prompt('Digite o Novo Nome da Sessão: ');
         let data = prompt('Digite a Nova Data da Sessão: ');
@@ -12,6 +15,6 @@ function atualizarSessao(callback) {
         global.sessoes[index] = { nome, data, hora, sala }
         console.log('Sessão Atualizada com Sucesso!')
     }
-    callback()
+    exibirMenu()
 }
 module.exports = { atualizarSessao }

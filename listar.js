@@ -1,4 +1,4 @@
-function listarSessoes(callback) {
+function listarSessoes() {
     console.log("=======================================================")
     global.sessoes.forEach((sessao, index) => {
         console.log(`
@@ -9,6 +9,6 @@ function listarSessoes(callback) {
             |sala: ${sessao.sala}|`)
         console.log("=======================================================")
     });
-    callback()
+    
 }
 module.exports = { listarSessoes }
